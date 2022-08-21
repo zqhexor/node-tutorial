@@ -1,12 +1,16 @@
 {
   "name": "node-tutorial",
   "version": "1.0.0",
-  "description": "",
+  "description": "node tutorial",
+  "keywords": ["node"],
+  "author": "Hexor Zeng <https://github.com/zqhexor>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zqhexor/node-tutorial.git"
+  },
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
