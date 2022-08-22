@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-
 /**
  * fs.writeFile()
  * 方法有两个特点:1) 如果没有该文件，则尝试创建;2) writeFile是覆盖写入
@@ -12,11 +11,10 @@ const fs = require('fs');
  *  如果文件写入失败 err的值为错误对象
  */
 
- fs.writeFile('../../files/output.txt', '你干嘛~哈哈~哎呦~', (err) => {
+fs.writeFile('../../files/output.txt', '你干嘛~哈哈~哎呦~', (err) => {
   // console.log(err);
-  if(err) {
+  if (err) {
     return console.log('文件写入失败！' + err.message);
   }
   console.log('文件写入成功！');
-})
-
+});
