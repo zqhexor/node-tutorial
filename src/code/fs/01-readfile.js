@@ -2,12 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * fs.readfile()
- * param1: 要读取文件的存放路径
- * param2: 读取文件时候采用的编码格式（可选，默认二进制）
- * param3: 回调函数
- *  如果文件读取成功 err的值为null， dataStr的值为文件内容
- *  如果文件读取失败 err的值为错误对象， dataStr的值为undefined
+ * fs.readFile(filename[, options], callback)
+ *  filename: 要读取文件的存放路径
+ *  options: 读取文件时候采用的编码格式（可选，默认二进制）
+ *  callback: 回调函数
+ *    如果文件读取成功 err的值为null， dataStr的值为文件内容
+ *    如果文件读取失败 err的值为错误对象， dataStr的值为undefined
  */
 /**
  * __dirname 表示当前文件所处目录
@@ -22,15 +22,15 @@ fs.readFile(path.join(__dirname, '../../files/input.txt'), 'utf8', (err, dataStr
 });
 
 /**
- * fs.readFileSync() 同步读取文件
- * param1: 要读取文件的存放路径
- * param2: 读取文件时候采用的编码格式（可选，默认二进制）
- *  如果文件读取成功 返回文件内容
- *  如果文件读取失败 抛出异常
+ * fs.readFileSync(filename[, options]) 同步读取文件
+ *  filename: 要读取文件的存放路径
+ *  options: 读取文件时候采用的编码格式（可选，默认二进制）
+ *    如果文件读取成功 返回文件内容
+ *    如果文件读取失败 抛出异常
  */
 try {
   const result = fs.readFileSync(path.join(__dirname, '../files/input.txt'), 'utf8');
   console.log('result: ', result);
 } catch (error) {
-  console.log('读取文件失败！' + error.message);
+  console.log('同步读取文件失败！' + error.message);
 }

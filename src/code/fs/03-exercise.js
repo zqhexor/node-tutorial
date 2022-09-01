@@ -1,3 +1,10 @@
+/**
+ * 练习：整理成绩
+ *  原始：蔡徐坤=99 周杰伦=100
+ *  整理后：
+ *    蔡徐坤：99
+ *    周杰伦：100
+ */
 const fs = require('fs');
 const path = require('path');
 
