@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 /**
  * fs.readfile()
@@ -8,7 +9,11 @@ const fs = require('fs');
  *  如果文件读取成功 err的值为null， dataStr的值为文件内容
  *  如果文件读取失败 err的值为错误对象， dataStr的值为undefined
  */
-fs.readFile('../../files/input.txt', 'utf8', (err, dataStr) => {
+/**
+ * __dirname 表示当前文件所处目录
+ * path.join()
+ */
+fs.readFile(path.join(__dirname, '../../files/input.txt'), 'utf8', (err, dataStr) => {
   // console.log(err, dataStr);
   if (err) {
     return console.log('读取文件失败！' + err.message);

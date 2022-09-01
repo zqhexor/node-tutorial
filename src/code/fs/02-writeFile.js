@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 /**
  * fs.writeFile()
@@ -10,8 +11,7 @@ const fs = require('fs');
  *  如果文件写入成功 err的值为null
  *  如果文件写入失败 err的值为错误对象
  */
-
-fs.writeFile('../../files/output.txt', '你干嘛~哈哈~哎呦~', (err) => {
+fs.writeFile(path.join(__dirname, '../../files/output.txt'), '你干嘛~哈哈~哎呦~', (err) => {
   // console.log(err);
   if (err) {
     return console.log('文件写入失败！' + err.message);
