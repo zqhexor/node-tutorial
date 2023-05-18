@@ -15,10 +15,9 @@
   "scripts": {
     "lint": "eslint --fix ."
   },
-  "dependencies": {
-    "eslint": "^8.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "eslint": "^8.40.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",

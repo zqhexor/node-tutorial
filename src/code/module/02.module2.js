@@ -6,7 +6,7 @@
 module.exports = {
   userName: '张三',
   age: 12,
-  sayHi () {
+  sayHi() {
     console.log('Hi');
   }
 };
