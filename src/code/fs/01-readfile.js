@@ -29,6 +29,7 @@ fs.readFile(path.join(__dirname, '../../files/input.txt'), 'utf8', (err, dataStr
  *    如果文件读取失败 抛出异常
  */
 try {
+  // 故意测试失败的情况
   const result = fs.readFileSync(path.join(__dirname, '../files/input.txt'), 'utf8');
   console.log('result: ', result);
 } catch (error) {
