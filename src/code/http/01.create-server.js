@@ -1,4 +1,5 @@
 const http = require('http');
+const querystring = require('querystring');
 
 // 1.创建web服务器实例
 const server = http.createServer();
@@ -9,7 +10,17 @@ server.on('request', (req, res) => {
   const url = req.url;
   // 客户端请求的method类型
   const method = req.method;
-  const str = `你的请求 url is ${url}, and request method is ${method}`;
+
+  const path = url.split('?')[0];
+  // 提取query参数
+  const query = querystring.parse(url.split('?')[1]);
+
+  const str = `
+  你的请求 url is ${url},<br/>
+  and request method is ${method},<br/>
+  and path is ${path},<br/>
+  and query is ${JSON.stringify(query)},<br/>
+  `;
   console.log(str);
 
   // res.setHeader()解决中文乱码问题
