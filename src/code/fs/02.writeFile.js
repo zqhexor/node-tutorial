@@ -31,7 +31,14 @@ fs.writeFile(path.join(__dirname, '../../files/output.txt'), '你干嘛~哈哈~�
  *  如果文件写入失败 err的值为错误对象
  */
 try {
-  fs.writeFileSync(path.join(__dirname, '../../files/outputSync.txt'), '你干嘛~哈哈~哎呦~', { flag: 'w+' });
+  fs.writeFileSync(path.join(__dirname, '../../files/outputSync.txt'), '你干嘛~哈哈~哎呦~', { flag: 'a' });
+  console.log('文件同步写入成功！');
+} catch (error) {
+  console.log('文件同步写入失败' + error.message);
+}
+
+try {
+  fs.appendFileSync(path.join(__dirname, '../../files/outputSync.txt'), '你干嘛~哈哈~哎呦~');
   console.log('文件同步写入成功！');
 } catch (error) {
   console.log('文件同步写入失败' + error.message);
