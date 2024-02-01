@@ -1,7 +1,7 @@
 const fsPromises = require('fs/promises');
 const path = require('path');
 
-const init = async () => {
+const init = async() => {
   try {
     // 创建一个控制器对象,通过使用AbortSignal对象完成与异步操作的通信
     const controller = new AbortController();
@@ -18,6 +18,6 @@ const init = async () => {
     // When a request is aborted - err is an AbortError
     console.error(err);
   }
-}
+};
 
 init();
